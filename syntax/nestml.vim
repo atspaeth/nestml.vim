@@ -11,6 +11,7 @@ endif
 syn keyword Statement neuron state equations parameters input output update
 syn keyword Statement internals kernel recordable inline return
 syn keyword Statement function if else elif while for and or not
+syn keyword Statement inhibitory excitatory spike continuous
 syn keyword Type real integer boolean string void
 
 " Builtin NESTML identifiers.
