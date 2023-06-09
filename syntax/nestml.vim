@@ -10,7 +10,7 @@ endif
 " Define all NESTML keywords.
 syn keyword Statement neuron state equations parameters input output update
 syn keyword Statement internals kernel recordable inline
-syn keyword Statement function if else elif while for end
+syn keyword Statement function if else elif while for
 syn keyword Type real integer boolean string void
 
 " Standard comment boilerplate.
