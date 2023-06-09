@@ -9,9 +9,15 @@ endif
 
 " Define all NESTML keywords.
 syn keyword Statement neuron state equations parameters input output update
-syn keyword Statement internals kernel recordable inline
-syn keyword Statement function if else elif while for
+syn keyword Statement internals kernel recordable inline return
+syn keyword Statement function if else elif while for and or not
 syn keyword Type real integer boolean string void
+
+" Builtin NESTML identifiers.
+syn keyword Function resolution steps t integrate_odes emit_spike
+syn keyword Function min max clip exp log10 ln expm1 sinh cosh tanh
+syn keyword Function random_normal random_uniform delta convolve
+syn keyword Function info warning print println
 
 " Standard comment boilerplate.
 syn keyword Todo contained TODO FIXME XXX
