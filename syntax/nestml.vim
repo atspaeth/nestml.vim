@@ -30,14 +30,14 @@ syn match Comment "#.*$" contains=Todo
 " but in other contexts will look like any old variable. Also, I'm not
 " using the standard Identifier group for identifiers because they
 " look weird highlighted like numbers as is default.
-syn match Constant "\<\(d\|c\|m\|mu\|n\|p\|f\|a\|z\|y\|da\|h\|k\|k\|M\|G\|T\|P\|E\|Z\|Y\|\)\(m\|kg\|s\|A\|K\|mol\|cd\|V\|Ohm\|rad\|sr\|Hz\|N\|Pa\|J\|W\|C\|F\|S\|Wb\|T\|H\|lm\|lx\|Bq\|Gy\|Sv\|kat\)\>" display
-syn match Type "\<\(d\|c\|m\|mu\|n\|p\|f\|a\|z\|y\|da\|h\|k\|k\|M\|G\|T\|P\|E\|Z\|Y\|\)\(m\|kg\|s\|A\|K\|mol\|cd\|V\|Ohm\|rad\|sr\|Hz\|N\|Pa\|J\|W\|C\|F\|S\|Wb\|T\|H\|lm\|lx\|Bq\|Gy\|Sv\|kat\)\>" display
+syn match Constant "\(\<\(|d\|c\|m\|mu\|n\|p\|f\|a\|z\|y\|da\|h\|k\|k\|M\|G\|T\|P\|E\|Z\|Y\|\)\(m\|kg\|s\|A\|K\|mol\|cd\|V\|Ohm\|rad\|sr\|Hz\|N\|Pa\|J\|W\|C\|F\|S\|Wb\|T\|H\|lm\|lx\|Bq\|Gy\|Sv\|kat\)\>\(/\|\*\)\)*\<\(d\|c\|m\|mu\|n\|p\|f\|a\|z\|y\|da\|h\|k\|k\|M\|G\|T\|P\|E\|Z\|Y\|\)\(m\|kg\|s\|A\|K\|mol\|cd\|V\|Ohm\|rad\|sr\|Hz\|N\|Pa\|J\|W\|C\|F\|S\|Wb\|T\|H\|lm\|lx\|Bq\|Gy\|Sv\|kat\)\>" display
+syn match Type "\(1/\)\?\(\<\(|d\|c\|m\|mu\|n\|p\|f\|a\|z\|y\|da\|h\|k\|k\|M\|G\|T\|P\|E\|Z\|Y\|\)\(m\|kg\|s\|A\|K\|mol\|cd\|V\|Ohm\|rad\|sr\|Hz\|N\|Pa\|J\|W\|C\|F\|S\|Wb\|T\|H\|lm\|lx\|Bq\|Gy\|Sv\|kat\)\>\(/\|\*\)\)*\<\(d\|c\|m\|mu\|n\|p\|f\|a\|z\|y\|da\|h\|k\|k\|M\|G\|T\|P\|E\|Z\|Y\|\)\(m\|kg\|s\|A\|K\|mol\|cd\|V\|Ohm\|rad\|sr\|Hz\|N\|Pa\|J\|W\|C\|F\|S\|Wb\|T\|H\|lm\|lx\|Bq\|Gy\|Sv\|kat\)\>" display
 syn match Name "\<\w*\>" display nextgroup=Type skipwhite
 
 " Define literals in a pretty standard way. Note that inf can't be
 " followed by a unit like real numbers can.
 syn match Constant "\(+\|-\)\?\d\+\(\.\d*\)\?\(e\(+\|-\)\?\d*\)\?" display nextgroup=Constant skipwhite
-syn keyword Constant inf
+syn keyword Constant inf true false
 syn region String start='"' end='"'
 syn region Comment start='"""' end='"""'
 
